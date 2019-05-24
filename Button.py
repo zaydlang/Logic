@@ -18,6 +18,7 @@ class Button:
         self.hover_color = tuple(max(0, x - 50) for x in list(fg_color))
         self.font = font
         self.text_color = text_color
+        self.state = True
 
     def set_text(self, text):
         self.text_surface = self.font.render(text, True, self.text_color)
@@ -25,10 +26,14 @@ class Button:
         self.text_rect.center = self.rect.center
 
     def draw(self, screen):
-        self.check_hovered()
-        self.button.fill(self.get_color())
-        screen.blit(self.button, (self.x, self.y))
-        screen.blit(self.text_surface, self.text_rect)
+        if self.state:
+            self.check_hovered()
+            self.button.fill(self.get_color())
+            screen.blit(self.button, (self.x, self.y))
+            screen.blit(self.text_surface, self.text_rect)
+        else:
+            self.button.fill((0, 0, 0))
+            screen.blit(self.button, (self.x, self.y))
 
     def check_hovered(self):
         if self.rect.collidepoint(pygame.mouse.get_pos()):
