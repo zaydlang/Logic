@@ -1,0 +1,16 @@
+Straight - A minecart that passes over this block will keep moving in the same direction.
+
+Left - Causes a minecart to turn to the left by 90 degrees.
+
+Right - Causes a minecart to turn to the right by 90 degrees.
+
+Switch - Toggles between turning right and turning left every time a minecart passes over it.
+
+Trigger - Affects Wait & Rebound (See below). If a minecart passes over a Trigger tile, any adjacent Wait tiles will release their minecarts. Any adjacent Rebound tiles will switch between Bounce mode and Straight mode. See the Wait & Rebound sections for additional details.
+
+Wait - Any minecart that passes over it will be locked in that location until another minecart passes over an adjacent trigger tile.
+
+Rebound - Allows minecarts to pass through it like a normal straight tile, until it is Triggered. Then, it will cause any minecart to rotate by 180 degrees. Each subsequent trigger will toggle the Rebound tile between Bounce mode and Straight mode.
+
+Bounce - Causes a minecart to turn by 180 degrees.
+
