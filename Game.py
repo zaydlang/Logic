@@ -19,7 +19,7 @@ class Application:
         self.mode = "editting"
         
     def create_board(self):
-        self.button_board = [[TileButton(x * 25 + 100, y * 25, 25, 25, "", self.button_font, (0, 0, 0), (255, 255, 255), Empty()) for y in range(20)] for x in range(20)]
+        self.button_board = [[TileButton(x * 25 + 100, y * 25, 25, 25, " ", self.button_font, (0, 0, 0), (255, 255, 255), Empty()) for y in range(20)] for x in range(20)]
         
     def create_widgets(self):
         self.radio_buttons.append(RadioButton(0, 450, 100, 50, "Erase", self.button_font, (0, 0, 0), (150, 150, 150)))
